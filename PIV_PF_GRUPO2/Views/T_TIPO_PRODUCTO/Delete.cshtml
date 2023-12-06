@@ -1,0 +1,64 @@
+﻿@model PIV_PF_GRUPO2.Models.T_TIPO_PRODUCTO
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>T_TIPO_PRODUCTO</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TIPO_PRODUCTO)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TIPO_PRODUCTO)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DESCRIPCION)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DESCRIPCION)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ID_PRODUCTO)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ID_PRODUCTO)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.T_ADMINISTRADOR.NOMBRE_USUARIO)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.T_ADMINISTRADOR.NOMBRE_USUARIO)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

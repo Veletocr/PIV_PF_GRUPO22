@@ -1,0 +1,44 @@
+﻿@model IEnumerable<PIV_PF_GRUPO2.Models.T_TIPO_USUARIO>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TIPO_USUARIO)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TIPO_USUARIO)
+            </td>
+            <td>
+
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID_Tipo_USUARIO }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID_Tipo_USUARIO }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID_Tipo_USUARIO })
+                <asp:GridView class="table center mx-auto" runat="server" ID="datos">
+
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

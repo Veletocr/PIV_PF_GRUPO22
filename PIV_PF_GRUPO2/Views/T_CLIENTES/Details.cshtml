@@ -1,0 +1,42 @@
+﻿@model PIV_PF_GRUPO2.Models.T_CLIENTE
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>T_CLIENTE</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.NOMBRECLIENTE)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NOMBRECLIENTE)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.EMAIL)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EMAIL)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID_CLIENTE }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

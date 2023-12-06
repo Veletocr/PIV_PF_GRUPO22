@@ -1,0 +1,88 @@
+﻿@model PIV_PF_GRUPO2.Models.T_USUARIO
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>T_USUARIO</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.NOMBRE_USUARIO)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NOMBRE_USUARIO)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.EMAIL)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EMAIL)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ESTADO_USUARIO)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ESTADO_USUARIO)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CLAVE)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CLAVE)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CONFIRMARCLAVE)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CONFIRMARCLAVE)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.T_ADMINISTRADOR.NOMBRE_USUARIO)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.T_ADMINISTRADOR.NOMBRE_USUARIO)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.T_TIPO_USUARIO.TIPO_USUARIO)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.T_TIPO_USUARIO.TIPO_USUARIO)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

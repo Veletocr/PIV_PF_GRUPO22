@@ -1,0 +1,65 @@
+﻿@model IEnumerable<PIV_PF_GRUPO2.Models.PRODUCTO>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DESCRIPCION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PRECIO_PRODUCTO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ESTADO_PRODUCTO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CANTIDAD_STOCK)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ESTADO_PRODUCTO.ID_ESTADO_PRODUCTO)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DESCRIPCION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRECIO_PRODUCTO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ESTADO_PRODUCTO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CANTIDAD_STOCK)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ESTADO_PRODUCTO.ID_ESTADO_PRODUCTO)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID_PRODUCTO }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID_PRODUCTO }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID_PRODUCTO })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

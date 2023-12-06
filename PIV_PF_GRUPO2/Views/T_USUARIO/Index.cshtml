@@ -1,0 +1,66 @@
+﻿@model IEnumerable<PIV_PF_GRUPO2.Models.T_USUARIO>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NOMBRE_USUARIO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EMAIL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ESTADO_USUARIO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CLAVE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.T_TIPO_USUARIO.TIPO_USUARIO)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOMBRE_USUARIO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMAIL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ESTADO_USUARIO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLAVE)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.T_TIPO_USUARIO.TIPO_USUARIO)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID_USUARIOS }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID_USUARIOS }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID_USUARIOS })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

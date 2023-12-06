@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4469f7cc7fd0451dac8c8b56d3c5a1b2" Name="Diagram1">
+        <EntityTypeShape EntityType="PIV_PF_ProyectoFinalModel.ESTADO_PRODUCTO" Width="1.5" PointX="3.75" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PIV_PF_ProyectoFinalModel.PRODUCTO" Width="1.5" PointX="6" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="PIV_PF_ProyectoFinalModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PIV_PF_ProyectoFinalModel.T_ACCIONES" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PIV_PF_ProyectoFinalModel.T_ADMINISTRADOR" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="PIV_PF_ProyectoFinalModel.T_CALCULO_SUBTOTAL" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PIV_PF_ProyectoFinalModel.T_CARGO_METODO_PAGO" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PIV_PF_ProyectoFinalModel.T_CLIENTE" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PIV_PF_ProyectoFinalModel.T_ESTADO_USUARIO" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PIV_PF_ProyectoFinalModel.T_FACTURACION" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PIV_PF_ProyectoFinalModel.T_METODO_PAGO" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PIV_PF_ProyectoFinalModel.T_PRODUCTOFACTURACION" Width="1.5" PointX="8.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PIV_PF_ProyectoFinalModel.T_ROL_OPERACION" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PIV_PF_ProyectoFinalModel.T_TIPO_PRODUCTO" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PIV_PF_ProyectoFinalModel.T_TIPO_USUARIO" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PIV_PF_ProyectoFinalModel.T_USUARIO" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <AssociationConnector Association="PIV_PF_ProyectoFinalModel.FK_PRODUCTO_ESTADO_PRODUCTO" ManuallyRouted="false" />
+        <AssociationConnector Association="PIV_PF_ProyectoFinalModel.FK_T_PRODUCTOFACTURACION_T_PRODUCTO" ManuallyRouted="false" />
+        <AssociationConnector Association="PIV_PF_ProyectoFinalModel.FK_T_ACCIONES_T_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="PIV_PF_ProyectoFinalModel.FK_T_ACCIONES_T_TIPO_PRODUCTO" ManuallyRouted="false" />
+        <AssociationConnector Association="PIV_PF_ProyectoFinalModel.FK_T_ROL_OPERACION_T_ACCIONES" ManuallyRouted="false" />
+        <AssociationConnector Association="PIV_PF_ProyectoFinalModel.FK_ID_FACTURACION" ManuallyRouted="false" />
+        <AssociationConnector Association="PIV_PF_ProyectoFinalModel.FK_ID_TIPO_PRODUCTO" ManuallyRouted="false" />
+        <AssociationConnector Association="PIV_PF_ProyectoFinalModel.FK_ID_USUARIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="PIV_PF_ProyectoFinalModel.FK_T_FACTURACION_T_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="PIV_PF_ProyectoFinalModel.FK_T_ROL_OPERACION_T_ESTADO_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="PIV_PF_ProyectoFinalModel.FK_T_PRODUCTOFACTURACION_T_FACTURACION" ManuallyRouted="false" />
+        <AssociationConnector Association="PIV_PF_ProyectoFinalModel.FK_T_ROL_OPERACION_T_TIPO_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="PIV_PF_ProyectoFinalModel.FK_T_USUARIO_T_TIPO_USUARIO" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

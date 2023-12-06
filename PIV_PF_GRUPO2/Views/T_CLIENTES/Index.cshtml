@@ -1,0 +1,55 @@
+﻿@model IEnumerable<PIV_PF_GRUPO2.Models.T_CLIENTE>
+
+    @{
+        ViewBag.Title = "Contact";
+    }
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Bootstrap 3 CRUD Generator">
+    <meta name="author" content="Davis E. Ford">
+
+</head>
+<body>
+    <br /> <br />  
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NOMBRECLIENTE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EMAIL)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NOMBRECLIENTE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EMAIL)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID_CLIENTE }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID_CLIENTE }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID_CLIENTE })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
